@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台灣山林步道與旅遊指南 | Taiwan Trails Guide</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="site-logo">
+        <span class="badge">TW TRAILS</span>
+        台灣山林步道指南
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">步道總覽</a>
+        <a href="AGENTS.md" target="_blank">AGENTS.md 規範</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <h1>探索台灣山林，用雙腳丈量島嶼風景</h1>
+      <p>本網站遵循 <strong>AGENTS.md</strong> 開發規範建置，以統一的路線規格卡、分段健行攻略與行前裝備清單，系統化整理台灣各地經典步道與自然景點。</p>
+      <div class="hero-stats">
+        <span>🥾 已收錄步道：2 條</span>
+        <span>🗺️ 涵蓋區域：北部地區 / 東部地區</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="filter-section" aria-label="地區篩選">
+    <button class="filter-btn active" data-region="all">全部步道</button>
+    <button class="filter-btn" data-region="北部地區">北部地區</button>
+    <button class="filter-btn" data-region="中部地區">中部地區</button>
+    <button class="filter-btn" data-region="南部地區">南部地區</button>
+    <button class="filter-btn" data-region="東部地區">東部地區</button>
+  </section>
+
+  <main class="trails-grid" id="trails-grid">
+    <!-- 步道卡片 1 -->
+    <article class="trail-card" data-region="北部地區">
+      <div>
+        <div class="card-badges">
+          <span class="region-tag">北部地區</span>
+          <span class="difficulty-tag">低-中難度</span>
+        </div>
+        <h2><a href="trails/north-qixing-mountain.html">陽明山・七星山主東峰步道</a></h2>
+        <p class="trail-excerpt">登上台北市最高峰（海拔 1,120 公尺），沿途近距離觀察小油坑後火山硫磺噴氣孔，天氣晴朗時可 360 度俯瞰大台北盆地與北海岸線。</p>
+        <div class="trail-meta-mini">
+          <span>📏 約 3.8～5 公里</span>
+          <span>⏱️ 約 2.5～3 小時</span>
+        </div>
+      </div>
+      <div class="trail-footer">
+        <span>台北市北投區 · 陽明山國家公園</span>
+        <a href="trails/north-qixing-mountain.html" class="read-more">路線攻略 →</a>
+      </div>
+    </article>
+
+    <!-- 步道卡片 2 -->
+    <article class="trail-card" data-region="東部地區">
+      <div>
+        <div class="card-badges">
+          <span class="region-tag">東部地區</span>
+          <span class="difficulty-tag">中級健腳級</span>
+        </div>
+        <h2><a href="trails/east-matcha-mountain.html">宜蘭礁溪・聖母登山步道（抹茶山）</a></h2>
+        <p class="trail-excerpt">穿越鬱鬱蔥蔥的五峰旗林道與連續木棧階梯，登頂聖母山莊觀景平台，眼前連綿起伏的翠綠山巒宛如濃厚抹茶冰淇淋，雲霧繚繞時宛若仙境。</p>
+        <div class="trail-meta-mini">
+          <span>📏 往返約 11 公里</span>
+          <span>⏱️ 約 4.5～6 小時</span>
+        </div>
+      </div>
+      <div class="trail-footer">
+        <span>宜蘭縣礁溪鄉 · 五峰旗風景區</span>
+        <a href="trails/east-matcha-mountain.html" class="read-more">路線攻略 →</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>台灣山林步道與旅遊指南 · 遵循 <code>AGENTS.md</code> 規範持續擴充新路線</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.trail-card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const region = btn.dataset.region;
+
+        cards.forEach(card => {
+          if (region === 'all' || card.dataset.region === region) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

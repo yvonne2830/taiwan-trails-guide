@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{步道名稱}} | 台灣山林步道指南</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="site-logo">
+        <span class="badge">TW TRAILS</span>
+        台灣山林步道指南
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">步道總覽</a>
+        <a href="../AGENTS.md" target="_blank">AGENTS.md 規範</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <a href="../index.html" class="back-link">← 返回步道總覽</a>
+
+    <header class="article-header">
+      <div class="card-badges">
+        <span class="region-tag">{{地區分類}}</span>
+        <span class="difficulty-tag">{{難度分級}}</span>
+      </div>
+      <h1>{{步道名稱}}</h1>
+      <p class="subtitle">{{一句話副標題描述風景特色}}</p>
+    </header>
+
+    <section class="specs-grid">
+      <div class="spec-item">
+        <span class="label">📏 步道里程</span>
+        <strong>{{里程}} km</strong>
+      </div>
+      <div class="spec-item">
+        <span class="label">⏱️ 預估時間</span>
+        <strong>{{時間}} 小時</strong>
+      </div>
+      <div class="spec-item">
+        <span class="label">⛰️ 最高海拔</span>
+        <strong>{{海拔}} 公尺</strong>
+      </div>
+      <div class="spec-item">
+        <span class="label">🥾 難度分級</span>
+        <strong>{{難度分級}}</strong>
+      </div>
+    </section>
+
+    <section class="summary-box">
+      <h3>🌿 步道亮點總覽</h3>
+      <p>{{在此填入 3 句話步道亮點與適合族群介紹}}</p>
+    </section>
+
+    <article class="route-card">
+      <h2><span class="step-badge">第一段</span> {{起點 → 中繼點（距離 / 時間）}}</h2>
+      <p>{{第一段路況與沿途風景說明}}</p>
+    </article>
+
+    <article class="route-card">
+      <h2><span class="step-badge">第二段</span> {{中繼點 → 終點（距離 / 時間）}}</h2>
+      <p>{{第二段路況與登頂視野說明}}</p>
+    </article>
+
+    <section class="gear-box">
+      <h3>🎒 交通接駁與行前裝備建議</h3>
+      <ul>
+        <li><strong>大眾運輸與停車：</strong>{{交通方式說明}}</li>
+        <li><strong>補給與廁所：</strong>{{飲水與洗手間位置提醒}}</li>
+        <li><strong>穿著與裝備：</strong>{{氣候與鞋具建議}}</li>
+      </ul>
+    </section>
+
+    <div class="source-credit">
+      <p><strong>路線資料參考：</strong>林業及自然保育署台灣山林悠遊網、交通部觀光署公開資訊（原創整理撰寫）。</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>台灣山林步道與旅遊指南 · 遵循 <code>AGENTS.md</code> 規範持續擴充新路線</p>
+  </footer>
+</body>
+</html>
